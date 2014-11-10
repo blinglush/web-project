@@ -14,6 +14,11 @@ import java.sql.SQLException;
 public class DBConnectionManager {
     private Connection conn;
 
+//    driver_class=com.mysql.jdbc.Driver
+//    url=jdbc:mysql://localhost/DB_MVC_JUL20
+//    username=root
+//    password=de11@6342
+
     public DBConnectionManager(String dbURL, String user, String pwd) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
         this.conn = DriverManager.getConnection(dbURL, user, pwd);
